@@ -24,6 +24,10 @@
       ],
       "lib-common/*": [
         "dist/lib-common/*"
+      ],
+      "lib-material": [
+        "dist/lib-material/lib-material",
+        "dist/lib-material"
       ]
     }
   },

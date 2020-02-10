@@ -28,6 +28,7 @@
               "projects/home/src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "projects/home/src/styles.scss"
             ],
             "scripts": []
@@ -93,6 +94,7 @@
               "projects/home/src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "projects/home/src/styles.scss"
             ],
             "scripts": []
@@ -150,6 +152,7 @@
               "projects/profile/src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "projects/profile/src/styles.scss"
             ],
             "scripts": []
@@ -215,6 +218,7 @@
               "projects/profile/src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "projects/profile/src/styles.scss"
             ],
             "scripts": []
@@ -286,6 +290,47 @@
           }
         }
       }
-    }},
+    },
+    "lib-material": {
+      "projectType": "library",
+      "root": "projects/lib-material",
+      "sourceRoot": "projects/lib-material/src",
+      "prefix": "lib-material",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/lib-material/tsconfig.lib.json",
+            "project": "projects/lib-material/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/lib-material/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/lib-material/src/test.ts",
+            "tsConfig": "projects/lib-material/tsconfig.spec.json",
+            "karmaConfig": "projects/lib-material/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/lib-material/tsconfig.lib.json",
+              "projects/lib-material/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
   "defaultProject": "home"
 }
