@@ -7,7 +7,13 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "home:build": "ng build home --prod --watch",
+    "home:http":"npx http-server -p 8000 -c-1 dist/home",
+    "home:client": "ng serve home -o --port 3000",
+    "profile:build": "ng build profile --prod --watch",
+    "profile:http":"npx http-server -p 8000 -c-1 dist/profile",
+    "profile:client": "ng serve profile -o --port 3100"
   },
   "private": true,
   "dependencies": {
@@ -24,13 +30,15 @@
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "~0.803.25",
     "@angular/cli": "~8.3.9",
     "@angular/compiler-cli": "~8.2.9",
     "@angular/language-service": "~8.2.9",
-    "@types/node": "~8.9.4",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~8.9.4",
     "codelyzer": "^5.0.0",
+    "http-server": "^0.12.1",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.1.0",
