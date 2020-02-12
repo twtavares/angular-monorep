@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { LibMaterialModule } from '@lib/material';
 import { LibCommonModule } from '@lib/common';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -15,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     LibCommonModule,
+    LibMaterialModule,
     BrowserAnimationsModule
   ],
   providers: [],
