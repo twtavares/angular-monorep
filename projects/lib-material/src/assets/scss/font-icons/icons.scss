@@ -1,0 +1,108 @@
+/*------------------------
+	variables
+-------------------------*/
+$mh-font-path: '~@lib/material/assets/scss/font-icons/fonts' !default;
+$icons: (
+  "mh-icon-card-add": "\ea02",
+  "mh-icon-card-locked": "\ea03",
+  "mh-icon-card-machine": "\ea04",
+  "mh-icon-card-favorite": "\ea05",
+  "mh-icon-card-remove": "\ea06",
+  "mh-icon-card-update": "\ea07",
+  "mh-icon-card": "\ea08",
+  "mh-icon-atm": "\ea09",
+  "mh-icon-cash": "\ea0a",
+  "mh-icon-coin-single": "\ea0b",
+  "mh-icon-coins-cash": "\ea0c",
+  "mh-icon-coins": "\ea0d",
+  "mh-icon-money": "\ea0e",
+  "mh-icon-wallet": "\ea0f",
+  "mh-icon-growing-up": "\ea10",
+  "mh-icon-bike": "\ea11",
+  "mh-icon-bus-1": "\ea12",
+  "mh-icon-bus-2": "\ea13",
+  "mh-icon-bus-3": "\ea14",
+  "mh-icon-car-1": "\ea15",
+  "mh-icon-car-2": "\ea16",
+  "mh-icon-car-3": "\ea17",
+  "mh-icon-moto-1": "\ea18",
+  "mh-icon-moto-2": "\ea19",
+  "mh-icon-steering-wheel": "\ea1a",
+  "mh-icon-truck-1": "\ea1b",
+  "mh-icon-card-in": "\ea1c",
+  "mh-icon-card-mobile": "\ea1d",
+  "mh-icon-card-edit": "\ea1e",
+  "mh-icon-acessibility": "\ea1f",
+  "mh-icon-mail": "\ea20",
+  "mh-icon-map-pin": "\ea21",
+  "mh-icon-attention": "\ea22",
+  "mh-icon-phone": "\ea23",
+  "mh-icon-question": "\ea24",
+  "mh-icon-security": "\ea25",
+  "mh-icon-wifi": "\ea26",
+  "mh-icon-checked": "\ea27",
+  "mh-icon-error-filled": "\ea28",
+  "mh-icon-person": "\ea29",
+  "mh-icon-add": "\ea2a",
+  "mh-icon-arrow-triangle-down": "\ea2b",
+  "mh-icon-chevron-down": "\ea2c",
+  "mh-icon-chevron-left": "\ea2d",
+  "mh-icon-chevron-right": "\ea2e",
+  "mh-icon-chevron-up": "\ea2f",
+  "mh-icon-close": "\ea30",
+  "mh-icon-delete": "\ea31",
+  "mh-icon-download": "\ea32",
+  "mh-icon-duplicate": "\ea33",
+  "mh-icon-edit": "\ea34",
+  "mh-icon-exit": "\ea35",
+  "mh-icon-info": "\ea36",
+  "mh-icon-refresh": "\ea37",
+  "mh-icon-resize": "\ea38",
+  "mh-icon-rounded-chveron-down": "\ea39",
+  "mh-icon-rounded-close": "\ea3a",
+  "mh-icon-ounded-delete-filled": "\ea3b",
+  "mh-icon-arrow-back-1": "\ea3c",
+  "mh-icon-search": "\ea3d",
+  "mh-icon-share": "\ea3e",
+  "mh-icon-rounded-delete": "\ea3f",
+  "mh-icon-arrow-go": "\ea40",
+  "mh-icon-upload": "\ea41",
+  "mh-icon-arrow-back": "\ea42",
+  "mh-icon-touch": "\ea43",
+);
+
+
+/*------------------------
+	font-face
+-------------------------*/
+@font-face {
+  font-family: 'mh';
+  src: url('#{$mh-font-path}/mh.eot');
+  src: url('#{$mh-font-path}/mh.eot') format('embedded-opentype'),
+    url('#{$mh-font-path}/mh.woff2') format('woff2'),
+    url('#{$mh-font-path}/mh.woff') format('woff'),
+    url('#{$mh-font-path}/mh.ttf') format('truetype'),
+    url('#{$mh-font-path}/mh.svg') format('svg');
+}
+
+
+/*------------------------
+	base class
+-------------------------*/
+.mh-icon {
+  display: inline-block;
+  font: normal normal normal 1em/1 'mh';
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/*------------------------
+	icons
+-------------------------*/
+@each $name, $glyph in $icons {
+  .#{$name}:before {
+    content: $glyph;
+  }
+}
