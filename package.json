@@ -15,8 +15,9 @@
     "profile:http": "npx http-server -p 8000 -c-1 dist/profile",
     "profile:client": "ng serve profile -o --port 3100",
     "lib-common:build": "ng build lib-common && npm i dist/lib-common --save-optional",
+    "lib-material:assets": "cp -R ./projects/lib-material/src/assets dist/lib-material/assets",
     "lib-material:build": "ng build lib-material && npm i dist/lib-material --save-optional",
-    "library:build": "npm run lib-common:build && npm run lib-material:build"
+    "library:build": "npm run lib-common:build && npm run lib-material:build && npm run lib-material:assets"
   },
   "private": true,
   "dependencies": {

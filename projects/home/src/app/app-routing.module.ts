@@ -1,8 +1,12 @@
+import { PageMaterialThemeComponent } from './page-material-theme/page-material-theme.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 
-const routes: Routes = [];
+const routes: Routes = [{
+  path: 'material-theme',
+  component: PageMaterialThemeComponent,
+}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
