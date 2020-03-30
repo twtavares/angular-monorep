@@ -10,42 +10,42 @@ import {OverlayContainer} from '@angular/cdk/overlay';
 })
 export class PageMaterialThemeComponent implements OnInit {
 
-  opened = true;
-  @ViewChild('sidenav', { static: true }) sidenav: MatSidenav;
+  // opened = true;
+  // // @ViewChild('sidenav', { static: true }) sidenav: MatSidenav;
 
-  constructor(overlayContainer: OverlayContainer) {
-    overlayContainer.getContainerElement().classList.add('unicorn-dark-theme');
-  }
+  // constructor(overlayContainer: OverlayContainer) {
+  //   overlayContainer.getContainerElement().classList.add('unicorn-dark-theme');
+  // }
 
   ngOnInit() {
-    console.log(window.innerWidth);
-    if (window.innerWidth < 768) {
-      this.sidenav.fixedTopGap = 55;
-      this.opened = false;
-    } else {
-      this.sidenav.fixedTopGap = 55;
-      this.opened = true;
-    }
+  //   console.log(window.innerWidth);
+  //   if (window.innerWidth < 768) {
+  //     this.sidenav.fixedTopGap = 55;
+  //     this.opened = false;
+  //   } else {
+  //     this.sidenav.fixedTopGap = 55;
+  //     this.opened = true;
+  //   }
   }
 
-  @HostListener('window:resize', ['$event'])
-  onResize(event) {
-    if (event.target.innerWidth < 768) {
-      this.sidenav.fixedTopGap = 55;
-      this.opened = false;
-    } else {
-      this.sidenav.fixedTopGap = 55;
-      this.opened = true;
-    }
-  }
+  // @HostListener('window:resize', ['$event'])
+  // onResize(event) {
+  //   if (event.target.innerWidth < 768) {
+  //     this.sidenav.fixedTopGap = 55;
+  //     this.opened = false;
+  //   } else {
+  //     this.sidenav.fixedTopGap = 55;
+  //     this.opened = true;
+  //   }
+  // }
 
-  isBiggerScreen() {
-    const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    if (width < 768) {
-      return true;
-    } else {
-      return false;
-    }
-  }
+  // isBiggerScreen() {
+  //   const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  //   if (width < 768) {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // }
 
 }

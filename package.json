@@ -17,7 +17,7 @@
     "lib-common:build": "ng build lib-common && npm i dist/lib-common --save-optional",
     "lib-material:assets": "cp -R ./projects/lib-material/src/assets dist/lib-material/assets",
     "lib-material:build": "ng build lib-material && npm i dist/lib-material --save-optional",
-    "library:build": "npm run lib-common:build && npm run lib-material:build && npm run lib-material:assets"
+    "library:build": "npm run lib-material:build && npm run lib-common:build && npm run lib-material:assets"
   },
   "private": true,
   "dependencies": {

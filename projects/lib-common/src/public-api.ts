@@ -5,3 +5,4 @@
 export * from './lib/lib-common.module';
 export * from './lib/footer/footer.component';
 export * from './lib/top-nav/top-nav.component';
+export * from './lib/switch-toggle/switch-toggle.component';
